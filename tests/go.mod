@@ -1,4 +1,4 @@
-module github.com/CloudNationHQ/terraform-azure-mag
+module github.com/cloudnationhq/terraform-azure-mag
 
 go 1.23.1
 

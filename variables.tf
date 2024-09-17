@@ -1,4 +1,4 @@
-variable "group" {
+variable "groups" {
   description = "describes monitor action group related configuration"
   type        = any
 }

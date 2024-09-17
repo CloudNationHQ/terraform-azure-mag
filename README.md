@@ -1,6 +1,6 @@
-# Monitor Action Group
+# Monitor Action Groups
 
-This terraform module simplifies the process of creating a monitor action group on azure with customizable options and features, offering a flexible and powerful solution for managing action groups through code.
+This terraform module simplifies the process of creating a monitor action groups on azure with customizable options and features, offering a flexible and powerful solution for managing action groups through code.
 
 ## Goals
 
@@ -50,7 +50,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 
 | Name | Description | Type | Required |
 | :-- | :-- | :-- | :-- |
-| `group` | describes data collection rule related configuration | object | yes |
+| `groups` | describes data collection rule related configuration | object | yes |
 | `location` | default azure region to be used | string | no |
 | `resource_group` | default resource group to be used | string | no |
 | `tags` | default tags to be added to the resources | map(string) | no |
@@ -59,7 +59,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 
 | Name | Description |
 | :-- | :-- |
-| `group` | contains the monitor action group configuration details |
+| `groups` | contains the monitor action group configuration details |
 
 ## Testing
 
@@ -83,7 +83,7 @@ Full examples detailing all usages, along with integrations with dependency modu
 
 ## Authors
 
-Module is maintained by [these awesome contributors](https://github.com/cloudnationhq/terraform-azure-ag/graphs/contributors).
+Module is maintained by [these awesome contributors](https://github.com/cloudnationhq/terraform-azure-mag/graphs/contributors).
 
 ## Contributing
 
