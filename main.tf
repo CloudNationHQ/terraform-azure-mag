@@ -118,3 +118,4 @@ resource "azurerm_monitor_action_group" "groups" {
 
   tags = try(each.value.tags, var.tags, {})
 }
+
