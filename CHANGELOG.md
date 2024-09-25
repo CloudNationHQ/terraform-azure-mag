@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v1.1.0...v2.0.0) (2024-09-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* * Version 4 of the azurerm provider includes breaking changes.
+
+### Features
+
+* upgrade azurerm provider to v4 ([#5](https://github.com/CloudNationHQ/terraform-azure-mag/issues/5)) ([aff5845](https://github.com/CloudNationHQ/terraform-azure-mag/commit/aff584593bb4a57477a26d6d8384250f04c7d508))
+
 ## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v1.0.0...v1.1.0) (2024-09-17)
 
 
