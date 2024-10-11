@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.0.0...v2.1.0) (2024-10-11)
+
+
+### Features
+
+* auto generated docs and refine makefile ([#8](https://github.com/CloudNationHQ/terraform-azure-mag/issues/8)) ([1ffa459](https://github.com/CloudNationHQ/terraform-azure-mag/commit/1ffa45917199bd54cbada67b23a920ef8027510d))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#7](https://github.com/CloudNationHQ/terraform-azure-mag/issues/7)) ([cf42dd8](https://github.com/CloudNationHQ/terraform-azure-mag/commit/cf42dd88fa0fe05c1ae29f0a9e12514711b02ca0))
+
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v1.1.0...v2.0.0) (2024-09-25)
 
 
