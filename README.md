@@ -27,39 +27,42 @@ End-to-end testing is not conducted on these modules, as they are individual com
 - offers support for action groups with e-mail and phone notifications.
 - utilization of terratest for robust validation.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.115 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.6 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.115 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Resources
 
 | Name | Type |
-| :-- | :-- |
-| [azurerm_monitor_action_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_action_group) | resource |
+|------|------|
+| [azurerm_monitor_action_group.groups](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_action_group) | resource |
 
 ## Inputs
 
-| Name | Description | Type | Required |
-| :-- | :-- | :-- | :-- |
-| `groups` | describes data collection rule related configuration | object | yes |
-| `location` | default azure region to be used | string | no |
-| `resource_group` | default resource group to be used | string | no |
-| `tags` | default tags to be added to the resources | map(string) | no |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_groups"></a> [groups](#input\_groups) | describes monitor action group related configuration | `any` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | default azure region to be used. | `string` | `null` | no |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | default resource group to be used. | `string` | `null` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | default tags to be added to the resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
-| :-- | :-- |
-| `groups` | contains the monitor action group configuration details |
+|------|-------------|
+| <a name="output_groups"></a> [groups](#output\_groups) | monitor action group configuration specifics |
+<!-- END_TF_DOCS -->
 
 ## Testing
 
