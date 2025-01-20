@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.3.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.2.0...v2.3.0) (2025-01-20)
+
+
+### Features
+
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#14](https://github.com/CloudNationHQ/terraform-azure-mag/issues/14)) ([bd819c7](https://github.com/CloudNationHQ/terraform-azure-mag/commit/bd819c72257ec339ad2f1f05a67de31cb81e8e56))
+* **deps:** bump golang.org/x/crypto from 0.21.0 to 0.31.0 in /tests ([#12](https://github.com/CloudNationHQ/terraform-azure-mag/issues/12)) ([083a9ab](https://github.com/CloudNationHQ/terraform-azure-mag/commit/083a9ab335ca3c1b307da047e4545196646b1220))
+* **deps:** bump golang.org/x/net from 0.23.0 to 0.33.0 in /tests ([#17](https://github.com/CloudNationHQ/terraform-azure-mag/issues/17)) ([7ef56a3](https://github.com/CloudNationHQ/terraform-azure-mag/commit/7ef56a326d62518791d45f28ed370da721ade540))
+* remove temporary files when deployment tests fails ([#15](https://github.com/CloudNationHQ/terraform-azure-mag/issues/15)) ([53a6f3e](https://github.com/CloudNationHQ/terraform-azure-mag/commit/53a6f3e496f6ff810a4b2ef9f5e151c6a935c4e2))
+
 ## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.1.0...v2.2.0) (2024-11-11)
 
 
