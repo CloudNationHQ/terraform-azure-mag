@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.3.0...v2.4.0) (2025-02-21)
+
+
+### Features
+
+* add enabled flag and AAD authentication support on action groups ([#20](https://github.com/CloudNationHQ/terraform-azure-mag/issues/20)) ([a72f2af](https://github.com/CloudNationHQ/terraform-azure-mag/commit/a72f2afac1bd94f04435dc5312f03ff6383212fc))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#19](https://github.com/CloudNationHQ/terraform-azure-mag/issues/19)) ([44674c1](https://github.com/CloudNationHQ/terraform-azure-mag/commit/44674c18ef7e864da05f218a499d30e257bd1105))
+
 ## [2.3.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.2.0...v2.3.0) (2025-01-20)
 
 
