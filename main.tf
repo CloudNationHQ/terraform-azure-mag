@@ -5,6 +5,7 @@ resource "azurerm_monitor_action_group" "groups" {
   resource_group_name = coalesce(try(each.value.resource_group, null), var.resource_group)
   short_name          = each.value.short_name
   location            = try(each.value.location, var.location, null)
+  enabled             = try(each.value.enabled, true)
 
   dynamic "arm_role_receiver" {
     for_each = try(each.value.arm_role_receiver, {})
@@ -113,6 +114,15 @@ resource "azurerm_monitor_action_group" "groups" {
       name                    = webhook_receiver.value.name
       service_uri             = webhook_receiver.value.service_uri
       use_common_alert_schema = try(webhook_receiver.value.use_common_alert_schema, null)
+
+      dynamic "aad_auth" {
+        for_each = try({ aad = webhook_receiver.value.aad_auth }, {})
+        content {
+          object_id      = aad_auth.value.object_id
+          identifier_uri = aad_auth.value.identifier_uri
+          tenant_id      = aad_auth.value.tenant_id
+        }
+      }
     }
   }
 
