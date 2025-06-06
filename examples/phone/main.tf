@@ -1,6 +1,6 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.1"
+  version = "~> 0.24"
 
   suffix = ["demo", "dev"]
 }
@@ -19,13 +19,13 @@ module "rg" {
 
 module "mag" {
   source  = "cloudnationhq/mag/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
-      name           = module.naming.monitor_action_group.name
-      resource_group = module.rg.groups.demo.name
-      short_name     = "mag-phone"
+      name                = module.naming.monitor_action_group.name
+      resource_group_name = module.rg.groups.demo.name
+      short_name          = "mag-phone"
 
       sms_receiver = {
         sms1 = {
