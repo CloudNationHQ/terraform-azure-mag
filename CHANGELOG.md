@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v3.0.0...v3.1.0) (2025-06-06)
+
+
+### Features
+
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#25](https://github.com/CloudNationHQ/terraform-azure-mag/issues/25)) ([396bdf0](https://github.com/CloudNationHQ/terraform-azure-mag/commit/396bdf06658434737ebaee5597399a95f08be4b6))
+
 ## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.4.0...v3.0.0) (2025-06-06)
 
 
