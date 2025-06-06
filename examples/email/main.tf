@@ -1,6 +1,6 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.1"
+  version = "~> 0.24"
 
   suffix = ["demo", "dev"]
 }
@@ -19,21 +19,19 @@ module "rg" {
 
 module "mag" {
   source  = "cloudnationhq/mag/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
-      name           = "mag-demo-dev-email"
-      resource_group = module.rg.groups.demo.name
-      short_name     = "mag-email"
+      name                = "mag-demo-dev-email"
+      resource_group_name = module.rg.groups.demo.name
+      short_name          = "mag-email"
 
       email_receiver = {
         email1 = {
-          name          = "send to admin"
           email_address = "admin@contoso.com"
         }
         email2 = {
-          name          = "send to support"
           email_address = "support@contoso.com"
         }
       }
