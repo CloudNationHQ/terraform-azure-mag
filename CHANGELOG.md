@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.4.0...v3.0.0) (2025-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* The data structure changed, causing a recreate on existing resources.
+
+### Features
+
+* small refactor ([#26](https://github.com/CloudNationHQ/terraform-azure-mag/issues/26)) ([05c04fa](https://github.com/CloudNationHQ/terraform-azure-mag/commit/05c04fae4bd48fe8f0121192e087147fa142c16b))
+
 ## [2.4.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v2.3.0...v2.4.0) (2025-02-21)
 
 
