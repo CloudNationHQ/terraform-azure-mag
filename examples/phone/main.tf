@@ -7,7 +7,7 @@ module "naming" {
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
@@ -19,12 +19,13 @@ module "rg" {
 
 module "mag" {
   source  = "cloudnationhq/mag/azure"
-  version = "~> 3.0"
+  version = "~> 4.0"
 
   groups = {
     demo = {
       name                = module.naming.monitor_action_group.name
       resource_group_name = module.rg.groups.demo.name
+      location            = "global"
       short_name          = "mag-phone"
 
       sms_receiver = {

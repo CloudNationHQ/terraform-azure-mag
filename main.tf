@@ -1,20 +1,16 @@
-resource "azurerm_monitor_action_group" "groups" {
+resource "azurerm_monitor_action_group" "this" {
   for_each = var.groups
 
   resource_group_name = coalesce(
-    lookup(
-      each.value, "resource_group_name", null
-    ), var.resource_group_name
+    each.value.resource_group_name, var.resource_group_name
   )
 
-  location = try(
-    each.value.location, var.location, null
+  location = coalesce(
+    each.value.location, var.location
   )
 
   name = coalesce(
-    each.value.name, try(
-      join("-", [var.naming.monitor_action_group, each.key]), null
-    ), each.key
+    each.value.name, each.key
   )
 
   short_name = each.value.short_name
@@ -31,7 +27,7 @@ resource "azurerm_monitor_action_group" "groups" {
 
     content {
       name = coalesce(
-        arn_role_receiver.value.name, arn_role_receiver.key
+        arm_role_receiver.value.name, arm_role_receiver.key
       )
 
       role_id                 = arm_role_receiver.value.role_id
@@ -215,4 +211,3 @@ resource "azurerm_monitor_action_group" "groups" {
     }
   }
 }
-
