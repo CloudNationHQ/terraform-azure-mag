@@ -180,10 +180,6 @@ We welcome contributions from the community! Whether it's reporting a bug, sugge
 
 For more information, please see our contribution [guidelines](./CONTRIBUTING.md). <br><br>
 
-<a href="https://github.com/cloudnationhq/terraform-azure-mag/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cloudnationhq/terraform-azure-mag" />
-</a>
-
 ## License
 
 MIT Licensed. See [LICENSE](./LICENSE) for full details.
@@ -192,4 +188,3 @@ MIT Licensed. See [LICENSE](./LICENSE) for full details.
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/monitor/action-groups)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/monitor/resource-manager)
