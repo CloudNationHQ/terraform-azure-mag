@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v3.1.0...v4.0.0) (2026-09-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Upgrade to azurerm v5 ([#40](https://github.com/CloudNationHQ/terraform-azure-mag/issues/40))
+
+### Features
+
+* Upgrade to azurerm v5 ([#40](https://github.com/CloudNationHQ/terraform-azure-mag/issues/40)) ([28b8883](https://github.com/CloudNationHQ/terraform-azure-mag/commit/28b88839af3f307cb371c65c5fa01fc2260fdd89))
+
 ## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-mag/compare/v3.0.0...v3.1.0) (2025-06-06)
 
 
