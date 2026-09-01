@@ -72,6 +72,11 @@ variable "groups" {
       name                    = optional(string)
       service_uri             = string
       use_common_alert_schema = optional(bool)
+      aad_auth = optional(object({
+        object_id      = string
+        identifier_uri = optional(string)
+        tenant_id      = optional(string)
+      }))
     })), {})
   }))
 

@@ -21,9 +21,7 @@ resource "azurerm_monitor_action_group" "this" {
   )
 
   dynamic "arm_role_receiver" {
-    for_each = try(
-      each.value.arm_role_receiver, {}
-    )
+    for_each = each.value.arm_role_receiver
 
     content {
       name = coalesce(
@@ -36,9 +34,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "automation_runbook_receiver" {
-    for_each = try(
-      each.value.automation_runbook_receiver, {}
-    )
+    for_each = each.value.automation_runbook_receiver
 
     content {
       name = coalesce(
@@ -55,9 +51,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "azure_app_push_receiver" {
-    for_each = try(
-      each.value.azure_app_push_receiver, {}
-    )
+    for_each = each.value.azure_app_push_receiver
 
     content {
       name = coalesce(
@@ -69,9 +63,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "azure_function_receiver" {
-    for_each = try(
-      each.value.azure_function_receiver, {}
-    )
+    for_each = each.value.azure_function_receiver
 
     content {
       name = coalesce(
@@ -86,9 +78,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "email_receiver" {
-    for_each = try(
-      each.value.email_receiver, {}
-    )
+    for_each = each.value.email_receiver
 
     content {
       name = coalesce(
@@ -101,9 +91,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "event_hub_receiver" {
-    for_each = try(
-      each.value.event_hub_receiver, {}
-    )
+    for_each = each.value.event_hub_receiver
 
     content {
       name = coalesce(
@@ -119,9 +107,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "itsm_receiver" {
-    for_each = try(
-      each.value.itsm_receiver, {}
-    )
+    for_each = each.value.itsm_receiver
 
     content {
       name = coalesce(
@@ -139,9 +125,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "logic_app_receiver" {
-    for_each = try(
-      each.value.logic_app_receiver, {}
-    )
+    for_each = each.value.logic_app_receiver
 
     content {
       name = coalesce(
@@ -155,9 +139,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "sms_receiver" {
-    for_each = try(
-      each.value.sms_receiver, {}
-    )
+    for_each = each.value.sms_receiver
 
     content {
       name = coalesce(
@@ -170,9 +152,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "voice_receiver" {
-    for_each = try(
-      each.value.voice_receiver, {}
-    )
+    for_each = each.value.voice_receiver
 
     content {
       name = coalesce(
@@ -185,9 +165,7 @@ resource "azurerm_monitor_action_group" "this" {
   }
 
   dynamic "webhook_receiver" {
-    for_each = try(
-      each.value.webhook_receiver, {}
-    )
+    for_each = each.value.webhook_receiver
 
     content {
       name = coalesce(
@@ -198,9 +176,7 @@ resource "azurerm_monitor_action_group" "this" {
       use_common_alert_schema = webhook_receiver.value.use_common_alert_schema
 
       dynamic "aad_auth" {
-        for_each = try(
-          { aad = webhook_receiver.value.aad_auth }, {}
-        )
+        for_each = webhook_receiver.value.aad_auth != null ? { "this" = webhook_receiver.value.aad_auth } : {}
 
         content {
           object_id      = aad_auth.value.object_id

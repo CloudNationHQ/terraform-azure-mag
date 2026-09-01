@@ -21,7 +21,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 5.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (5.3.0)
 
 ## Resources
 
@@ -112,6 +112,11 @@ map(object({
       name                    = optional(string)
       service_uri             = string
       use_common_alert_schema = optional(bool)
+      aad_auth = optional(object({
+        object_id      = string
+        identifier_uri = optional(string)
+        tenant_id      = optional(string)
+      }))
     })), {})
   }))
 ```
